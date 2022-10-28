@@ -1,0 +1,115 @@
+﻿<form method="post">
+    <div class="modal fade" id="upsertModal" role="dialog" tabindex="-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel">Temp</h5>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <input id="hiddenInput" hidden/>
+                            <span for="modalInput" class="text-danger" id="input-span"></span>
+                            <input type="text" id="modalInput" placeholder="Station name" class="form-control" />
+                        </div>
+                    </form>
+                    <div class="modal-footer">
+                        <a id="cancelBtn" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</a>
+                        <a id="actionBtn" class="btn btn-primary">temp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script src="~/lib/jquery/dist/jquery.min.js" type="text/javascript"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="~/js/station.js"></script>
+<script type="text/javascript">
+    
+    $('#actionBtn').click(function(e) {
+        var inputValue = upsertModal.querySelector('#modalInput').value;
+        
+        switch (upsertModal.querySelector('#modalLabel').textContent) {
+            case 'Create':
+                $.ajax({
+                    type: 'POST',
+                    url: '@Url.Action("Create", "Stations")',
+                    data: { "stationName": inputValue },
+                    success: function(response) {
+                        if (response['success'] == false) {
+                            var sp = $('#input-span');
+                            sp.text(response['message']);
+                            sp.show();
+                        }
+                        else {
+                            document.location.reload();
+                            toastr.success(response['message']);
+                        }
+                    },
+                    error: function() {
+                        alert("huynya");
+                    },
+                    failure: function() {
+                        alert("meni huyovo")
+                    }
+                });
+                break;
+
+            case 'Edit':
+                {
+                    var model = { "id": $('#btnEdit').data('id'), "name": inputValue };
+                    
+                    $.ajax({
+                        type: 'PUT',
+                        url: '@Url.Action("Edit", "Stations")',
+                        data: model,
+                        success: function(response) {
+                            if (response['success'] == false) {
+                                var sp = $('#input-span');
+                                sp.text(response['message']);
+                                sp.show();
+                            }
+                            else {
+                                document.location.reload();
+                                toastr.success(response['message']);
+                            }
+                        },
+                        error: function() {
+                            alert("huynya");
+                        },
+                        failure: function() {
+                            alert("meni huyovo")
+                        }
+                    });
+                    break;
+                }
+            default:
+                {
+                    $.ajax({
+                        type: 'DELETE',
+                        url: '@Url.Action("Delete", "Stations")',
+                        data: {"id": $('#btnDelete').data('id')},
+                        success: function(response) {
+                            if (response['success'] == false) {
+                                toastr.error(response['message']);
+                            }
+                            else {
+                                document.location.reload();
+                                toastr.success(response['message']);
+                            }
+                        },
+                        error: function() {
+                            alert("huynya");
+                        },
+                        failure: function() {
+                            alert("meni huyovo")
+                        }
+                    });
+                }
+        }
+    })
+</script>
+

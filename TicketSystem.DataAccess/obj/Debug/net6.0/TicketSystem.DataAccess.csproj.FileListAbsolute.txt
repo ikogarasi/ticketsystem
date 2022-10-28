@@ -1,0 +1,17 @@
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.DataAccess\bin\Debug\net6.0\TicketSystem.DataAccess.deps.json
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.DataAccess\bin\Debug\net6.0\TicketSystem.DataAccess.runtimeconfig.json
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.DataAccess\bin\Debug\net6.0\TicketSystem.DataAccess.dll
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.DataAccess\bin\Debug\net6.0\TicketSystem.DataAccess.pdb
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.DataAccess\bin\Debug\net6.0\TicketSystem.Models.dll
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.DataAccess\bin\Debug\net6.0\TicketSystem.Models.pdb
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.DataAccess\obj\Debug\net6.0\TicketSystem.DataAccess.csproj.AssemblyReference.cache
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.DataAccess\obj\Debug\net6.0\TicketSystem.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.DataAccess\obj\Debug\net6.0\TicketSystem.DataAccess.AssemblyInfoInputs.cache
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.DataAccess\obj\Debug\net6.0\TicketSystem.DataAccess.AssemblyInfo.cs
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.DataAccess\obj\Debug\net6.0\TicketSystem.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.DataAccess\obj\Debug\net6.0\TicketSystem.DataAccess.csproj.CopyComplete
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.DataAccess\obj\Debug\net6.0\TicketSystem.DataAccess.dll
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.DataAccess\obj\Debug\net6.0\refint\TicketSystem.DataAccess.dll
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.DataAccess\obj\Debug\net6.0\TicketSystem.DataAccess.pdb
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.DataAccess\obj\Debug\net6.0\TicketSystem.DataAccess.genruntimeconfig.cache
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.DataAccess\obj\Debug\net6.0\ref\TicketSystem.DataAccess.dll
