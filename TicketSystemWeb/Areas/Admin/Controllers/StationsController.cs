@@ -63,7 +63,7 @@ namespace TicketSystemWeb.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult GetStation(Guid? id)
         {
-            if (id == null)
+            if (id == null || id == Guid.Empty)
                 return Json(new { success = false, message = "Id cannot equal null" });
 
             var stationFromDb = _unitOfWork.Stations.GetFirstOrDefault(i => i.Id == id);
@@ -80,8 +80,6 @@ namespace TicketSystemWeb.Areas.Admin.Controllers
             var stationList = _unitOfWork.Stations.GetAll();
             return Json(new { data = stationList });
         }
-
-
         #endregion
     }
 }

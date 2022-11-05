@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "BwRH7TgIZqR6hKnwc3y3CXsaKngD8fTXzq9jRP1ciSs=",
+  "Hash": "UcVbfGP+WvUx+/UijVOZVg+0lVm08B3uhQXXxHDnOOY=",
   "Source": "TicketSystemWeb",
   "BasePath": "_content/TicketSystemWeb",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystemWeb\\wwwroot\\js\\routes.js",
+      "SourceId": "TicketSystemWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystemWeb\\wwwroot\\",
+      "BasePath": "_content/TicketSystemWeb",
+      "RelativePath": "js/routes.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\routes.js"
     },
     {
       "Identity": "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystemWeb\\wwwroot\\js\\site.js",

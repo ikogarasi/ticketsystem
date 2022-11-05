@@ -21,7 +21,7 @@ namespace TicketSystem.DataAccess.Repository
     
         public void Update(RouteModel obj)
         {
-            var routeFromDb = _db.Stations.FirstOrDefault(i => i.Id == obj.Id);
+            var routeFromDb = _db.Routes.FirstOrDefault(i => i.Id == obj.Id);
             if (routeFromDb != null)
             {
                 foreach (PropertyInfo prop in typeof(RouteModel).GetProperties())

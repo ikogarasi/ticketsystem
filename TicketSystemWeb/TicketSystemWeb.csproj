@@ -24,4 +24,8 @@
     <ProjectReference Include="..\TicketSystem.DataAccess\TicketSystem.DataAccess.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="Areas\Admin\Views\Routes\_DeletePopup.cshtml" />
+  </ItemGroup>
+
 </Project>

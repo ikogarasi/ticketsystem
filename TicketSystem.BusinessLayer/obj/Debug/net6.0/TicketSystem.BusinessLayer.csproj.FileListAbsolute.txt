@@ -1,0 +1,12 @@
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.BusinessLayer\bin\Debug\net6.0\TicketSystem.BusinessLayer.deps.json
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.BusinessLayer\bin\Debug\net6.0\TicketSystem.BusinessLayer.dll
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.BusinessLayer\bin\Debug\net6.0\TicketSystem.BusinessLayer.pdb
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.BusinessLayer\obj\Debug\net6.0\TicketSystem.BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.BusinessLayer\obj\Debug\net6.0\TicketSystem.BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.BusinessLayer\obj\Debug\net6.0\TicketSystem.BusinessLayer.AssemblyInfoInputs.cache
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.BusinessLayer\obj\Debug\net6.0\TicketSystem.BusinessLayer.AssemblyInfo.cs
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.BusinessLayer\obj\Debug\net6.0\TicketSystem.BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.BusinessLayer\obj\Debug\net6.0\TicketSystem.BusinessLayer.dll
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.BusinessLayer\obj\Debug\net6.0\refint\TicketSystem.BusinessLayer.dll
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.BusinessLayer\obj\Debug\net6.0\TicketSystem.BusinessLayer.pdb
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.BusinessLayer\obj\Debug\net6.0\ref\TicketSystem.BusinessLayer.dll

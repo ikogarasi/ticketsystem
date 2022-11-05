@@ -18,13 +18,13 @@ namespace TicketSystem.Models
         public string Name { get; set; }
 
         [Required]
-        public Guid? DestinationStationId { get; set; }
+        public Guid DestinationStationId { get; set; }
         [ForeignKey("DestinationStationId")]
         [ValidateNever]
         public StationModel DestinationStation { get; set; }
 
         [Required]
-        public Guid? OutgoingStationId { get; set; }
+        public Guid OutgoingStationId { get; set; }
         [ForeignKey("OutgoingStationId")]
         [ValidateNever]
         public StationModel OutgoingStation { get; set; }

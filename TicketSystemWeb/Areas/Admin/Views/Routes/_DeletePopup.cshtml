@@ -1,0 +1,47 @@
+﻿<form method="post">
+    <div class="modal fade" id="deleteModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Delete route?</h5>
+          </div>
+          <div class="modal-body">
+            <p style="text-align:center">Are you sure? This action cannot be canceled.</p>
+          </div>
+          <div class="modal-footer">
+            <a class="btn btn-secondary" data-bs-dismiss="modal">Close</a>
+            <a id="actionBtn" class="btn btn-danger">Delete</a>
+          </div>
+        </div>
+      </div>
+    </div>
+</form>
+
+<script src="~/lib/jquery/dist/jquery.min.js" type="text/javascript"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script type="text/javascript">
+    
+$('#actionBtn').click(function(e) {
+    $.ajax({
+        type: 'DELETE',
+        url: '@Url.Action("Delete", "Routes")',
+        data: { "id": $('#btnDelete').data('id') },
+        success: function(response) {
+            if (response['success'] == false)
+                toastr.error(response['message']);
+            else {
+                document.location.reload();
+                toastr.success(response['message']);
+            }
+        },
+        error: function() {
+            alert("huynya");
+        },
+        failure: function() {
+            alert("meni huyovo");
+        }
+    });
+});
+
+</script>
