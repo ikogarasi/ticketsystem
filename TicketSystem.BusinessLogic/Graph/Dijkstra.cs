@@ -8,21 +8,33 @@ namespace TicketSystem.BusinessLogic.Graph
 {
     public static class Dijkstra
     {
-        public static void Init<T>(WeightedGraph<T> graph, T start) where T : class
+        public static void Init<T>(WeightedGraph<T> graph, T src) where T : class
         {
-            Dictionary<T, double> distance = new Dictionary<T, double>();
-            foreach (var item in graph.adjencyMatrix)
-            {
-                distance.Add(item.Key, double.MaxValue);
-            }
+            if (graph.Vertices.Count == 0)
+                throw new Exception("Dijkstra: vertices is empty");
 
-            SortedSet<Edge<T>> pq = new SortedSet<Edge<T>>();
-            pq.Add(new Edge<T>(start, 0));
+            Vertex<T> source = graph.FindVertex(src);
+            if (source == null)
+                throw new Exception("Dijkstra: source is not found");
 
-            while (pq.Count > 0)
+            source.MinDistance = 0;
+            PriorityQueue<Vertex<T>, int> priorityQueue = new PriorityQueue<Vertex<T>, int>();
+            priorityQueue.Enqueue(source, 1);
+
+            while (priorityQueue.Count > 0)
             {
-                Edge<T> current = pq.First();
-                pq.Remove(current);
+                Vertex<T> u = priorityQueue.Dequeue();
+                foreach (var v in u.Outgoing)
+                {
+                    Edge<T> edge = graph.FindEdge(u, v);
+                    if (edge == null)
+                        throw new Exception("Dijkstra: imposter");
+
+                    double totalDistance = u.MinDistance + edge.Weight;
+                    if (totalDistance < v.MinDistance)
+                    {
+                    }
+                }
             }
         }
     }

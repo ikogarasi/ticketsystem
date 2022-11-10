@@ -9,56 +9,58 @@ namespace TicketSystem.BusinessLogic.Graph
 {
     public class WeightedGraph<T> where T : class
     {
-        public Dictionary<T, LinkedList<Edge<T>>> adjencyMatrix;        
+        public List<Vertex<T>> Vertices;
+        public List<Edge<T>> Edges;
 
         public WeightedGraph()
         {
-            adjencyMatrix = new Dictionary<T, LinkedList<Edge<T>>>();
+            Vertices = new List<Vertex<T>>();
+            Edges = new List<Edge<T>>();
         }
 
-        public void AddEdge(T vertex, T connectedVertex, double weight)
+        public void AddEdge(T src, T dest, double weight)
         {
-            adjencyMatrix.Add(vertex, new LinkedList<Edge<T>>());
-            adjencyMatrix.Add(connectedVertex, new LinkedList<Edge<T>>());
-            Edge<T> tempEdge = new Edge<T>(connectedVertex, weight);
-            adjencyMatrix[vertex].AddLast(tempEdge);
-        }
-
-        public void RemoveEdge(T vertex, T connectedVertex)
-        {
-            if (adjencyMatrix[vertex] == null)
-                throw new KeyNotFoundException("Edge is not found");
-            Edge<T> edge = FindEdgeByVertex(vertex, connectedVertex);
-            adjencyMatrix[vertex].Remove(edge);
-        }
-
-        public bool HasNode(T key) => adjencyMatrix.ContainsKey(key);
-
-        public bool HasEdge(T vertex, T connectedVertex)
-        {
-            Edge<T> edge = FindEdgeByVertex(vertex, connectedVertex);
-            return edge != null;
-        }
-            
-
-        public void RemoveNode(T vertex)
-        {
-            foreach (T key in adjencyMatrix.Keys)
+            Edge<T> temp = FindEdge(src, dest);
+            if (temp != null)
             {
-                Edge<T> edge = FindEdgeByVertex(key, vertex);
-                if (edge != null)
-                    adjencyMatrix[key].Remove(edge);
+                temp.Weight = weight;
+            }
+            else
+            {
+                Edge<T> e = new Edge<T>(src, dest, weight, Vertices);
+                Edges.Add(e);
+            }
+        }
+
+        public Vertex<T> FindVertex(T vertex)
+        {
+            foreach (var each in Vertices)
+            {
+                if (each.Value.Equals(vertex))
+                    return each;
             }
 
-            adjencyMatrix.Remove(vertex);
+            return null;
         }
 
-        private Edge<T> FindEdgeByVertex(T vertex, T connectedVertex)
+        public Edge<T> FindEdge(Vertex<T> vertex1, Vertex<T> vertex2)
         {
-            LinkedList<Edge<T>> edges = adjencyMatrix[vertex];
-            foreach (var edge in edges)
-                if (edge.ConnectedVertex.Equals(connectedVertex))
-                    return edge;
+            foreach (var each in Edges)
+            {
+                if (each.From.Equals(vertex1) && each.To.Equals(vertex2))
+                    return each;
+            }
+
+            return null;
+        }
+
+        public Edge<T> FindEdge(T from, T to)
+        {
+            foreach (var each in Edges)
+            {
+                if (each.From.Value.Equals(from) && each.To.Value.Equals(to))
+                    return each;
+            }
 
             return null;
         }
