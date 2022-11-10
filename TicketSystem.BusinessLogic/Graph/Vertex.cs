@@ -13,7 +13,7 @@ namespace TicketSystem.BusinessLogic.Graph
         
         public T Value { get; set; }
         public double MinDistance { get; set; }
-        public Vertex<T> Parent { get; set; }
+        public Vertex<T> Previous { get; set; }
         public State St { get; set; }
 
         public Vertex(T obj)
@@ -32,8 +32,6 @@ namespace TicketSystem.BusinessLogic.Graph
         {
             return MinDistance > other.MinDistance ? 1 
                 : Math.Abs(MinDistance - other.MinDistance) <= 1e-7 ? 0 : -1;
-        }
-
-        
+        }   
     }
 }
