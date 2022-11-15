@@ -1,3 +1,29 @@
+/* _content/TicketSystemWeb/Areas/User/Views/Home/Index.cshtml.rz.scp.css */
+body[b-p8yrnb09ns] {
+}
+
+/*.bg-img {
+    background-image: url("img/about-bg.png"); 
+    max-width: 100%;
+    height: auto;
+    
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}*/
+
+.ticket-form[b-p8yrnb09ns] {
+    background: url("img/about-bg.png") top center no-repeat;
+    margin-top: 20px;
+    padding: 140px 0;
+    position: relative;
+}
+
+.section-title[b-p8yrnb09ns] {
+    text-align: center;
+    padding-bottom: 30px;
+}
 /* _content/TicketSystemWeb/Views/Shared/_Layout.cshtml.rz.scp.css */
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */

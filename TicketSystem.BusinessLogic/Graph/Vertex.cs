@@ -14,7 +14,6 @@ namespace TicketSystem.BusinessLogic.Graph
         public T Value { get; set; }
         public double MinDistance { get; set; }
         public Vertex<T> Previous { get; set; }
-        public State St { get; set; }
 
         public Vertex(T obj)
         {
@@ -22,7 +21,6 @@ namespace TicketSystem.BusinessLogic.Graph
             Outgoing = new List<Vertex<T>>();
             Value = obj;
             MinDistance = Double.MaxValue;
-            St = State.UNVISITED;
         }
 
         public void AddIncoming(Vertex<T> vertex) => Incoming.Add(vertex);

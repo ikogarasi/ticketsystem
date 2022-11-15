@@ -1,0 +1,25 @@
+﻿body {
+}
+
+/*.bg-img {
+    background-image: url("img/about-bg.png"); 
+    max-width: 100%;
+    height: auto;
+    
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}*/
+
+.ticket-form {
+    background: url("img/about-bg.png") top center no-repeat;
+    margin-top: 20px;
+    padding: 140px 0;
+    position: relative;
+}
+
+.section-title {
+    text-align: center;
+    padding-bottom: 30px;
+}

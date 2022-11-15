@@ -1,0 +1,26 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-0">
+  <div class="container-fluid" bis_skin_checked="1">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarAdmin" aria-controls="navbarAdmin" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="" role="button">
+            <i class="fa-solid fa-window-minimize"></i>
+        </span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarAdmin" bis_skin_checked="1">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Manage data</a>
+          <div class="dropdown-menu" bis_skin_checked="1">
+            <a class="dropdown-item" asp-area="admin" asp-controller="Stations" asp-action="Index">Stations</a>
+            <a class="dropdown-item" asp-area="admin" asp-controller="Routes" asp-action="Index">Routes</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+

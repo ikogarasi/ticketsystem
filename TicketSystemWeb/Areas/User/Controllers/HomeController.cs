@@ -1,5 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Diagnostics;
+using TicketSystem.DataAccess.Repository.IRepository;
+using TicketSystem.Models.ViewModels;
 using TicketSystemWeb.Models;
 
 namespace TicketSystemWeb.Areas.User.Controllers
@@ -7,16 +10,29 @@ namespace TicketSystemWeb.Areas.User.Controllers
     [Area("User")]
     public class HomeController : Controller
     {
+        private readonly IUnitOfWork _unitOfWork;
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IUnitOfWork unitOfWork)
         {
             _logger = logger;
+            _unitOfWork = unitOfWork;
         }
 
+        [HttpGet]
         public IActionResult Index()
         {
-            return View();
+            RouteSearchVM searchVM = new()
+            {
+                StationsList = _unitOfWork.Stations.GetAll().Select(
+                    i => new SelectListItem()
+                    {
+                        Text = i.Name,
+                        Value = i.Id.ToString()
+                    }),
+            }; 
+                
+            return View(searchVM);
         }
 
         public IActionResult Privacy()

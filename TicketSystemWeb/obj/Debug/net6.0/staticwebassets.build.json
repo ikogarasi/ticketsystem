@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UcVbfGP+WvUx+/UijVOZVg+0lVm08B3uhQXXxHDnOOY=",
+  "Hash": "ba2j53S5PwmVrmFNqRBvBzlur2qPTPfc99tCSTV0yxg=",
   "Source": "TicketSystemWeb",
   "BasePath": "_content/TicketSystemWeb",
   "Mode": "Default",
@@ -51,6 +51,23 @@
       "OriginalItemSpec": "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystemWeb\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\TicketSystemWeb.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystemWeb\\wwwroot\\css\\BootstrapTheme.css",
+      "SourceId": "TicketSystemWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystemWeb\\wwwroot\\",
+      "BasePath": "_content/TicketSystemWeb",
+      "RelativePath": "css/BootstrapTheme.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\BootstrapTheme.css"
+    },
+    {
       "Identity": "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystemWeb\\wwwroot\\css\\site.css",
       "SourceId": "TicketSystemWeb",
       "SourceType": "Discovered",
@@ -83,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystemWeb\\wwwroot\\img\\about-bg.png",
+      "SourceId": "TicketSystemWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystemWeb\\wwwroot\\",
+      "BasePath": "_content/TicketSystemWeb",
+      "RelativePath": "img/about-bg.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\about-bg.png"
     },
     {
       "Identity": "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystemWeb\\wwwroot\\js\\routes.js",

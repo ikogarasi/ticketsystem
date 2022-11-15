@@ -7,7 +7,7 @@ namespace TicketSystem.BusinessLogic
     public class ShortestPathLogic
     {
         /// <summary>
-        /// Trying to implement logic here before making it on repository
+        /// Elthon john molodec
         /// </summary>
         private readonly IUnitOfWork _unitOfWork;
         private WeightedGraph<StationModel> _graph;
