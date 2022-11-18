@@ -1,29 +1,31 @@
-﻿<div class="container p-3">
-    <div class="row pt-4">
-        <div class="col-6">
-            <h2 class="text-primary">Stations list</h2>
-        </div>
-        <div class="col-6 text-end">
-            <button id="createBtn" class="btn btn-primary" data-bs-target="#upsertModal" data-bs-toggle="modal">Create</button>
+﻿<div container>
+    <div class="container p-3">
+        <div class="row pt-4">
+            <div class="col-6">
+                <h2 class="text-primary">Stations list</h2>
+            </div>
+            <div class="col-6 text-end">
+                <button id="createBtn" class="btn btn-primary" data-bs-target="#upsertModal" data-bs-toggle="modal">Create</button>
+            </div>
         </div>
     </div>
+    <br /><br /><br />
+    
+    <table id="tblData" class="table table-bordered table-stripped" style="width:100%">
+        <thead>
+            <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Actions
+                </th>
+            </tr>
+        </thead>
+    </table>
+    
+    <partial name="_Popup" />
 </div>
-<br /><br /><br />
-
-<table id="tblData" class="table table-bordered table-stripped" style="width:100%">
-    <thead>
-        <tr>
-            <th>
-                Name
-            </th>
-            <th>
-                Actions
-            </th>
-        </tr>
-    </thead>
-</table>
-
-<partial name="_Popup" />
 
 @section Scripts
 {

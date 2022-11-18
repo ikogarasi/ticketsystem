@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Newtonsoft.Json;
 using System.Diagnostics;
 using TicketSystem.DataAccess.Repository.IRepository;
 using TicketSystem.Models.ViewModels;
@@ -35,6 +36,17 @@ namespace TicketSystemWeb.Areas.User.Controllers
             return View(searchVM);
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Index(RouteSearchVM obj)
+        {
+            if (obj.DestinationStationId == obj.OutgoingStationId)
+                ModelState.AddModelError("DestinationStationId", "Destination Station cannot be the same as outgoing");
+            
+            return RedirectToAction("Index", controllerName: "Route", obj);
+        }
+
+        [HttpGet]
         public IActionResult Privacy()
         {
             return View();

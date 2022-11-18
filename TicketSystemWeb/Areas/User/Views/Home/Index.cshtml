@@ -1,15 +1,6 @@
 ﻿@model RouteSearchVM
 
 <section class="ticket-form">
-    @*<div class="section-title">
-        <h1>Lorem ipsum</h1>
-        <div class="container">
-            <p>
-            dolor sit amet dolor sit amet dolor sit ametdolor sit amet
-            dolor sit amet dolor sit amet dolor sit amet dolor sit amet
-            </p>
-        </div>
-    </div>*@
     <form method="post">
         <div class="card m-3" style="width:18rem">
             <div class="container">
@@ -26,16 +17,15 @@
                     </select>
                     <div class="btn-group mt-3" role="group" aria-label="Basic radio toggle button group" bis_skin_checked="1">
                         <div class="m-1">
-                            <input type="radio" class="btn-check" id="distance-radio" autocomplete="off" checked="" />
+                            <input type="radio" asp-for="Priority" value="@Priorities.DISTANCE" class="btn-check" id="distance-radio" autocomplete="off" checked="" />
                             <label class="btn btn-outline-primary" for="distance-radio">Distance</label>
                         </div>
                         <div class="m-1">
-                            @*<input type="radio" class="btn-check" id="time-radio" autocomplete="off" checked="" />*@
-                            @Html.RadioButtonFor(model => model.Priority, Priorities.TIME, new {})
+                            <input type="radio" asp-for="Priority" value="@Priorities.TIME" class="btn-check" id="time-radio" autocomplete="off" checked="" />
                             <label class="btn btn-outline-primary" for="time-radio">Time</label>
                         </div>
                         <div class="m-1">
-                            <input type="radio" class="btn-check" id="price-radio" autocomplete="off" checked="" />
+                            <input type="radio" asp-for="Priority" value="@Priorities.PRICE" class="btn-check" id="price-radio" autocomplete="off" checked="" />
                             <label class="btn btn-outline-primary" for="price-radio">Price</label>
                         </div>
                     </div>

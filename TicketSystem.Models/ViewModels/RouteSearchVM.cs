@@ -12,11 +12,9 @@ namespace TicketSystem.Models.ViewModels
 {
     public class RouteSearchVM
     {
-        [Required]
         public Guid OutgoingStationId { get; set; }
         [ForeignKey("OutgoingStationId")]
         public StationModel OutgoingStation { get; set; }
-        [Required]
         public Guid DestinationStationId { get; set; }
         [ForeignKey("DestinationStationId")]
         public StationModel DestinationStation { get; set; }

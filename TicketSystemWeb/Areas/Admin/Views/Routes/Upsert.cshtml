@@ -6,70 +6,69 @@
 }
 
 @model RouteVM
-
-<form method="post">
-    <input asp-for="Route.Id" hidden />
-    
-    <div class="row">
-        <div class="col">
-            <div class="border p-3 mt-4 row">
-                <div class="row pb-2">
-                    <h2 class="text-primary">@(Model.Route.Id == Guid.Empty ? "Create" : "Update") route</h2>
-                    <hr />
-                </div>
-                <div class="mb-3">
-                    <span asp-validation-for="Route.Name" class="text-danger"></span>
-                    <label asp-for="Route.Name" class="text-primary">Name</label>
-                    <input asp-for="Route.Name" class="form-control" />
-                </div>
-                <div class="mb-3 col-6">
-                    <span asp-validation-for="Route.OutgoingStation" class="text-danger"></span>
-                    <label asp-for="Route.OutgoingStationId" class="text-primary">Outgoing Station</label>
-                    <select asp-for="Route.OutgoingStationId" asp-items="@Model.StationsList" class="form-select" >
-                        <option disabled selected>--Select station--</option>
-                    </select>
-                </div>
-                <div class="mb-3 col-6">
-                    <span asp-validation-for="Route.DestinationStation" class="text-danger"></span>
-                    <label asp-for="Route.DestinationStationId" class="text-primary">Destination Station</label>
-                    <select asp-for="Route.DestinationStationId" asp-items="@Model.StationsList" class="form-select" >
-                        <option disabled selected>--Select station--</option>
-                    </select>
-                </div>
-                <div class="mb-3 col-6">
-                    <span asp-validation-for="Route.Distance" class="text-danger"></span>
-                    <label asp-for="Route.Distance" class="text-primary">Distance</label>
-                    <input asp-for="Route.Distance" placeholder="km" class="form-control" />
-                </div>
-                <div class="mb-3 col-6">
-                    <span asp-validation-for="Route.Price" class="text-danger"></span>
-                    <label asp-for="Route.Price" class="text-primary">Price</label>
-                    <input asp-for="Route.Price" placeholder="$" class="form-control" />
-                </div>
-                <div class="mb-3">
-                    <span asp-validation-for="Route.Duration" class="text-danger"></span>
-                    <label asp-for="Route.Duration" class="text-primary">Duration</label>
-                    <input asp-for="Route.Duration" asp-format="{0:hh\:mm}" placeholder="hh:mm" class="form-control" />
-                </div>
-                <div class="col-6">
-                    @if(Model.Route.Id == Guid.Empty)
-                    {
-                       <button type="submit" onclick="return ValidateInput()" class="btn btn-primary">
-                           Create
-                        </button>
-                    }
-                    else
-                    {
-                        <button type="submit" class="btn btn-primary" style="width:150px">
-                            Update
-                        </button>
-                    }
-                    <a asp-controller="Route" asp-action="Index" class="btn btn-secondary" style="width:150px">
-                        Cancel
-                    </a>
+<div class="container">
+    <form method="post">
+        <input asp-for="Route.Id" hidden />
+        <div class="row">
+            <div class="col">
+                <div class="border p-3 mt-4 row">
+                    <div class="row pb-2">
+                        <h2 class="text-primary">@(Model.Route.Id == Guid.Empty ? "Create" : "Update") route</h2>
+                        <hr />
+                    </div>
+                    <div class="mb-3">
+                        <span asp-validation-for="Route.Name" class="text-danger"></span>
+                        <label asp-for="Route.Name" class="text-primary">Name</label>
+                        <input asp-for="Route.Name" class="form-control" />
+                    </div>
+                    <div class="mb-3 col-6">
+                        <span asp-validation-for="Route.OutgoingStation" class="text-danger"></span>
+                        <label asp-for="Route.OutgoingStationId" class="text-primary">Outgoing Station</label>
+                        <select asp-for="Route.OutgoingStationId" asp-items="@Model.StationsList" class="form-select" >
+                            <option disabled selected>--Select station--</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 col-6">
+                        <span asp-validation-for="Route.DestinationStation" class="text-danger"></span>
+                        <label asp-for="Route.DestinationStationId" class="text-primary">Destination Station</label>
+                        <select asp-for="Route.DestinationStationId" asp-items="@Model.StationsList" class="form-select" >
+                            <option disabled selected>--Select station--</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 col-6">
+                        <span asp-validation-for="Route.Distance" class="text-danger"></span>
+                        <label asp-for="Route.Distance" class="text-primary">Distance</label>
+                        <input asp-for="Route.Distance" placeholder="km" class="form-control" />
+                    </div>
+                    <div class="mb-3 col-6">
+                        <span asp-validation-for="Route.Price" class="text-danger"></span>
+                        <label asp-for="Route.Price" class="text-primary">Price</label>
+                        <input asp-for="Route.Price" placeholder="$" class="form-control" />
+                    </div>
+                    <div class="mb-3">
+                        <span asp-validation-for="Route.Duration" class="text-danger"></span>
+                        <label asp-for="Route.Duration" class="text-primary">Duration</label>
+                        <input asp-for="Route.Duration" asp-format="{0:hh\:mm}" placeholder="hh:mm" class="form-control" />
+                    </div>
+                    <div class="col-6">
+                        @if(Model.Route.Id == Guid.Empty)
+                        {
+                           <button type="submit" onclick="return ValidateInput()" class="btn btn-primary">
+                               Create
+                            </button>
+                        }
+                        else
+                        {
+                            <button type="submit" class="btn btn-primary" style="width:150px">
+                                Update
+                            </button>
+                        }
+                        <a asp-controller="Routes" asp-action="Index" class="btn btn-secondary" style="width:150px">
+                            Cancel
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
-</form>
+    </form>
+</div>
