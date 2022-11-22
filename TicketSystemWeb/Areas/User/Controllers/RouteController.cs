@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
 using System.Text.Json;
+using TicketSystem.BusinessLogic;
 using TicketSystem.DataAccess.Repository.IRepository;
 using TicketSystem.Models.ViewModels;
 
@@ -18,28 +19,20 @@ namespace TicketSystemWeb.Areas.User.Controllers
         }
 
         [HttpGet]
-        public IActionResult Index(RouteSearchVM? obj)
+        public IActionResult Index(RouteSearchVM obj)
         {
-            RouteSearchVM searchVM = new()
+            SearchResultVM searchResultVM = new()
             {
-                StationsList = _unitOfWork.Stations.GetAll().Select(
-                    i => new SelectListItem()
-                    {
-                        Text = i.Name,
-                        Value = i.Id.ToString()
-                    })
+                RouteSearchVM = obj
             };
 
-            if (obj == null)
-                return View(searchVM);
+            searchResultVM.RouteSearchVM.OutgoingStation = _unitOfWork.Stations.GetFirstOrDefault(i => i.Id == obj.OutgoingStationId);
+            searchResultVM.RouteSearchVM.DestinationStation = _unitOfWork.Stations.GetFirstOrDefault(i => i.Id == obj.DestinationStationId);
 
-            searchVM.DestinationStationId = obj.DestinationStationId;
-            searchVM.OutgoingStationId = obj.OutgoingStationId;
-            searchVM.Priority = obj.Priority;
+            ShortestPathHandler shortestPathLogic = new ShortestPathHandler(_unitOfWork);
+            shortestPathLogic.FindShortestRoute(searchResultVM);
 
-            return View(searchVM);
-        } 
-        
-
+            return View(searchResultVM);
+        }
     }
 }

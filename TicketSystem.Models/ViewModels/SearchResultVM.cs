@@ -8,8 +8,10 @@ namespace TicketSystem.Models.ViewModels
 {
     public class SearchResultVM
     {
-        public SortedSet<StationModel> Stations { get; set; }
-        public SortedSet<RouteModel> Routes { get; set; }
+        public RouteSearchVM RouteSearchVM { get; set; }
+
+        public List<StationModel> Stations { get; set; }
+        public List<RouteModel> Routes { get; set; }
         
         public double SummaryPrice { get; set; }
         public double SummaryDistance { get; set; }

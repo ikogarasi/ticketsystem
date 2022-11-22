@@ -1,49 +1,19 @@
-﻿@model RouteSearchVM
+﻿@model SearchResultVM
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
 }
 
-<section class="search-section">
+<section class="data-section">
     <div class="container">
-        <form method="get">
+        <form method="post">
             <div class="row">
                 <div class="col">
                     <div class="border p-3 mt-4 row">
-                        <div class="mb-3 col-6 text-center">
-                            <span asp-validation-for="OutgoingStation" class="text-danger"></span>
-                            <label asp-for="OutgoingStationId" class="text-primary">Outgoing Station</label>
-                            <select asp-for="OutgoingStationId" asp-items="@Model.StationsList" class="form-select" >
-                                <option disabled selected>--Select station--</option>
-                            </select>
-                        </div>
-                        <div class="mb-3 col-6 text-center">
-                            <span asp-validation-for="DestinationStation" class="text-danger"></span>
-                            <label asp-for="DestinationStationId" class="text-primary">Destination Station</label>
-                            <select asp-for="DestinationStationId" asp-items="@Model.StationsList" class="form-select" >
-                                <option disabled selected>--Select station--</option>
-                            </select>
-                        </div>
-                        <div class="btn-group mt-3 col-6" role="group" aria-label="Basic radio toggle button group" bis_skin_checked="1">
-                            <div class="m-1">
-                                <input type="radio" asp-for="Priority" value="@Priorities.DISTANCE" class="btn-check" id="distance-radio" autocomplete="off" checked="" />
-                                <label class="btn btn-outline-primary" for="distance-radio">Distance</label>
-                            </div>
-                            <div class="m-1">
-                                <input type="radio" asp-for="Priority" value="@Priorities.TIME" class="btn-check" id="time-radio" autocomplete="off" checked="" />
-                                <label class="btn btn-outline-primary" for="time-radio">Time</label>
-                            </div>
-                            <div class="m-1">
-                                <input type="radio" asp-for="Priority" value="@Priorities.PRICE" class="btn-check" id="price-radio" autocomplete="off" checked="" />
-                                <label class="btn btn-outline-primary" for="price-radio">Price</label>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <button type="submit" class="btn btn-secondary mt-3" style="width:100px">
-                                Search
-                            </button>
-                        </div>
+                        <div class="col-6 text-center">
+                            <h2 class="text-primary">@Model.RouteSearchVM.OutgoingStation.Name <i class="bi bi-arrow-right"></i> @Model.RouteSearchVM.DestinationStation.Name</h2>
+                        </div> 
                     </div>
                 </div>
             </div>
@@ -51,10 +21,35 @@
     </div>
 </section>
 
-<section class="result-section mt-5">
+<section class="mt-5">
     <div class="container">
-        <div class="col">
-
+        <div class="border p-3 mt-4 row">
+            <h3 class="text-primary">
+                @for (int i = 0; i < @Model.Stations.Count; ++i)
+                {
+                    @Model.Stations[i].Name
+                    if (i != @Model.Stations.Count - 1)
+                    {
+                        <i class="bi bi-arrow-right-short"></i>
+                    }
+                }
+            </h3>
+            <hr />
+            <p class="text-secondary">
+                <i class="bi bi-airplane"></i>&nbsp;
+                @for (int i = 0; i < @Model.Routes.Count; ++i)
+                {
+                    string coma = ", ";
+                    @Model.Routes[i].Name;
+                    if (i != @Model.Routes.Count - 1)
+                    {
+                        @coma;
+                    }
+                }
+            </p>
+            @*<p class="text-primary">
+                Price: <strong>@Model.SummaryPrice$</strong> 
+            </p>*@
         </div>
     </div>
 </section>

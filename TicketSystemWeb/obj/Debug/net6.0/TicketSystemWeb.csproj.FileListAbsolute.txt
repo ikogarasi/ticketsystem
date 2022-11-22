@@ -278,3 +278,8 @@ C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystemWeb\bin\Debug\
 C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystemWeb\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystemWeb\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystemWeb\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystemWeb\bin\Debug\net6.0\TicketSystem.BusinessLogic.dll
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystemWeb\bin\Debug\net6.0\TicketSystem.BusinessLogic.pdb
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystemWeb\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystemWeb\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.UI.dll
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystemWeb\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Embedded.dll
