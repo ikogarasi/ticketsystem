@@ -1,0 +1,12 @@
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.Utility\bin\Debug\net6.0\TicketSystem.Utility.deps.json
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.Utility\bin\Debug\net6.0\TicketSystem.Utility.dll
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.Utility\bin\Debug\net6.0\TicketSystem.Utility.pdb
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.Utility\obj\Debug\net6.0\TicketSystem.Utility.csproj.AssemblyReference.cache
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.Utility\obj\Debug\net6.0\TicketSystem.Utility.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.Utility\obj\Debug\net6.0\TicketSystem.Utility.AssemblyInfoInputs.cache
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.Utility\obj\Debug\net6.0\TicketSystem.Utility.AssemblyInfo.cs
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.Utility\obj\Debug\net6.0\TicketSystem.Utility.csproj.CoreCompileInputs.cache
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.Utility\obj\Debug\net6.0\TicketSystem.Utility.dll
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.Utility\obj\Debug\net6.0\refint\TicketSystem.Utility.dll
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.Utility\obj\Debug\net6.0\TicketSystem.Utility.pdb
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.Utility\obj\Debug\net6.0\ref\TicketSystem.Utility.dll

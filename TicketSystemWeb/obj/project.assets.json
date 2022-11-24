@@ -3732,13 +3732,24 @@
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.2.0",
           "Microsoft.EntityFrameworkCore": "6.0.10",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.10"
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.10",
+          "Microsoft.Extensions.Identity.Stores": "6.0.10"
         },
         "compile": {
           "bin/placeholder/TicketSystem.Models.dll": {}
         },
         "runtime": {
           "bin/placeholder/TicketSystem.Models.dll": {}
+        }
+      },
+      "TicketSystem.Utility/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/TicketSystem.Utility.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TicketSystem.Utility.dll": {}
         }
       }
     }
@@ -11050,6 +11061,11 @@
       "type": "project",
       "path": "../TicketSystem.Models/TicketSystem.Models.csproj",
       "msbuildProject": "../TicketSystem.Models/TicketSystem.Models.csproj"
+    },
+    "TicketSystem.Utility/1.0.0": {
+      "type": "project",
+      "path": "../TicketSystem.Utility/TicketSystem.Utility.csproj",
+      "msbuildProject": "../TicketSystem.Utility/TicketSystem.Utility.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -11061,7 +11077,8 @@
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.10",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.10",
       "TicketSystem.BusinessLogic >= 1.0.0",
-      "TicketSystem.DataAccess >= 1.0.0"
+      "TicketSystem.DataAccess >= 1.0.0",
+      "TicketSystem.Utility >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -11096,6 +11113,9 @@
             },
             "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystem.DataAccess\\TicketSystem.DataAccess.csproj": {
               "projectPath": "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystem.DataAccess\\TicketSystem.DataAccess.csproj"
+            },
+            "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystem.Utility\\TicketSystem.Utility.csproj": {
+              "projectPath": "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystem.Utility\\TicketSystem.Utility.csproj"
             }
           }
         }

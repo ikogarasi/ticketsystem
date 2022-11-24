@@ -13,7 +13,7 @@ namespace TicketSystem.DataAccess.Data
 
         public DbSet<StationModel> Stations { get; set; }
         public DbSet<RouteModel> Routes { get; set; }
-
+        public DbSet<UserModel> Users { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
