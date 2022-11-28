@@ -10,6 +10,7 @@ namespace TicketSystem.DataAccess.Repository.IRepository
     {
         IStationRepository Stations { get; }
         IRouteRepository Routes { get; }
+        IBoardingPassRepository BoardingPasses { get; }
 
         void Save();
     }

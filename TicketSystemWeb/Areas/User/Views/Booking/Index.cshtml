@@ -1,0 +1,79 @@
+﻿@model BoardingPassModel
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <section class="sectionPlane">
+               <div class="plane">
+                   <div class="cockpit">
+                       <h1>Please select a seat</h1>
+                   </div>
+                   <div>
+                       <ol class="cabin fuselage">
+                           @{
+                               int seatEnumIndex = 0;
+                               for (int i = 1; i <= 10; ++i)
+                               {
+                                       <li class="row--@i">
+                                           <ol class="seats" type="A">
+                                           @for(int j = 1; j <= 6; ++j)
+                                           {
+                                               <li class="seat">
+                                                   <input class="btn-check" asp-for="Seat" type="radio" id="@((SittingPlace)seatEnumIndex)" 
+                                                   value="@((SittingPlace)seatEnumIndex)" autocomplete="off" checked="">
+                                                   <label class="btn btn-outline-primary" for="@((SittingPlace)seatEnumIndex)">@((SittingPlace)seatEnumIndex)</label>
+                                               </li>
+                                               ++seatEnumIndex;
+                                           }
+                                           </ol>
+                                       </li>
+                               }
+                           }
+                       </ol>
+                   </div>
+                </div>        
+            </section>
+        </div>
+            <div class="col-md-6 p-3" style="margin: 20px auto auto 50px">
+                 <h1>Passenger data</h1>
+                 <hr />
+                 <div class="container">
+                        <div class="form-floating py-2">
+                            <div class="btn-group" role="group" aria-label="Basic radio toggle button group" bis_skin_checked="1">
+                                <div class="m-1">
+                                    <input type="radio" asp-for="PassengerGender" value="@Gender.Mr" class="btn-check" id="mr-radio" autocomplete="off" checked="" />
+                                    <label class="btn btn-outline-primary" for="mr-radio">Mr</label>
+                                </div>
+                                <div class="m-1">
+                                    <input type="radio" asp-for="PassengerGender" value="@Gender.Mrs" class="btn-check" id="mrs-radio" autocomplete="off" checked="" />
+                                    <label class="btn btn-outline-primary" for="mrs-radio">Mrs</label>
+                                </div>
+                                <div class="m-1">
+                                    <input type="radio" asp-for="PassengerGender" value="@Gender.Ms" class="btn-check" id="ms-radio" autocomplete="off" checked="" />
+                                    <label class="btn btn-outline-primary" for="ms-radio">Ms</label>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="row">
+                        <div class="mb-3 col-6">
+                            <span asp-validation-for="PassengerFirstName" class="text-danger"></span>
+                            <label asp-for="PassengerFirstName" class="text-primary">First name</label>
+                            <input asp-for="PassengerFirstName" class="form-control" />
+                        </div>
+                        <div class="mb-3 col-6">
+                            <span asp-validation-for="PassengerSecondName" class="text-danger"></span>
+                            <label asp-for="PassengerSecondName" class="text-primary">Second name</label>
+                            <input asp-for="PassengerSecondName" class="form-control" />
+                        </div>
+                     </div>
+                 </div>
+            </div>
+        </div>
+    </div>

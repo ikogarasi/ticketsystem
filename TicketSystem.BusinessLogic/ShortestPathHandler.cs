@@ -10,7 +10,7 @@ namespace TicketSystem.BusinessLogic
     /// </summary>
     public class ShortestPathHandler
     {
-        private readonly IUnitOfWork _unitOfWork;
+        private readonly IUnitOfWork _unitOfWork; 
         private WeightedGraph<StationModel> _graph;
 
         public ShortestPathHandler(IUnitOfWork unitOfWork)
@@ -34,19 +34,28 @@ namespace TicketSystem.BusinessLogic
                     break;
             }
 
-            List<StationModel> stations = ShortestPath<StationModel>.GetPath(_graph,
-                obj.RouteSearchVM.OutgoingStation, obj.RouteSearchVM.DestinationStation);
+            List<StationModel> stations = new();
+
+            try
+            {
+                stations = ShortestPath<StationModel>.GetPath(_graph,
+                    obj.RouteSearchVM.OutgoingStation, obj.RouteSearchVM.DestinationStation);
+            }
+            catch
+            {
+                obj.IsRouteFound = false;
+                return;
+            }
             
             List<RouteModel> routes = new List<RouteModel>();
-            if (stations.Count > 2)
-                for (int i = 0; i < stations.Count - 1; ++i)
-                {
-                    var route = _unitOfWork.Routes.GetFirstOrDefault(route => route.OutgoingStationId == stations[i].Id && route.DestinationStationId == stations[i + 1].Id);
-                    if (route != null)
-                        routes.Add(route);
-                    else
-                        throw new Exception("Route Not Found");
-                }
+            for (int i = 0; i < stations.Count - 1; ++i)
+            {
+                var route = _unitOfWork.Routes.GetFirstOrDefault(route => route.OutgoingStationId == stations[i].Id && route.DestinationStationId == stations[i + 1].Id);
+                if (route != null)
+                    routes.Add(route);
+                else
+                    throw new Exception("Route Not Found");
+            }
             obj.Routes = routes;
             obj.Stations = stations;
             

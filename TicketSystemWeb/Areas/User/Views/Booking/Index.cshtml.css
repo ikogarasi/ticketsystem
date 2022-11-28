@@ -1,0 +1,74 @@
+﻿*,*:before, *::after {
+    box-sizing: border-box;
+}
+
+.plane {
+    margin: 20px auto;
+    max-width: 340px;
+}
+
+.cockpit {
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    border-bottom: 2px solid #d8d8d8;
+}
+.cockpit::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 500px;
+    width: 100%;
+    border-radius: 50%;
+    border-right: 2px solid #d8d8d8;
+    border-left: 2px solid #d8d8d8;
+}
+
+.cockpit h1 {
+    width: 60%;
+    margin: 100px auto 35px auto;
+}
+
+.fuselage {
+    border-right: 2px solid #d8d8d8;
+    border-left: 2px solid #d8d8d8;
+}
+
+ol {
+    list-style: none;
+    padding: 0px;
+    margin: 0;
+}
+
+.seats {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+.seat {
+    display: flex;
+    flex: 0 0 14.28571428571429%;
+    padding: 2px;
+    position: relative;
+}
+.seat:nth-child(3) {
+    margin-right: 14.28571428571429%;
+}
+
+.seat input[type=radio] {
+    position: absolute;
+    opacity: 0;
+}
+
+.seat label {
+    display: block;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding: 4px 0;
+}

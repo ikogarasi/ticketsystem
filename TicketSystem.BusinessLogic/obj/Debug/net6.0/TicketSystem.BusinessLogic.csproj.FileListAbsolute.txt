@@ -15,3 +15,5 @@ C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.BusinessLogic
 C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.BusinessLogic\obj\Debug\net6.0\refint\TicketSystem.BusinessLogic.dll
 C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.BusinessLogic\obj\Debug\net6.0\TicketSystem.BusinessLogic.pdb
 C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.BusinessLogic\obj\Debug\net6.0\ref\TicketSystem.BusinessLogic.dll
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.BusinessLogic\bin\Debug\net6.0\TicketSystem.Utility.dll
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.BusinessLogic\bin\Debug\net6.0\TicketSystem.Utility.pdb

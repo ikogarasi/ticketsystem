@@ -34,5 +34,11 @@ namespace TicketSystemWeb.Areas.User.Controllers
 
             return View(searchResultVM);
         }
+
+        [HttpPost]
+        public IActionResult Index()
+        {
+            return RedirectToAction("Index", "Booking");
+        }
     }
 }

@@ -2378,6 +2378,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "TicketSystem.Utility/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/TicketSystem.Utility.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TicketSystem.Utility.dll": {}
+        }
       }
     }
   },
@@ -7643,6 +7653,11 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "TicketSystem.Utility/1.0.0": {
+      "type": "project",
+      "path": "../TicketSystem.Utility/TicketSystem.Utility.csproj",
+      "msbuildProject": "../TicketSystem.Utility/TicketSystem.Utility.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -7651,7 +7666,8 @@
       "Microsoft.EntityFrameworkCore >= 6.0.10",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.10",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.10",
-      "Microsoft.Extensions.Identity.Stores >= 6.0.10"
+      "Microsoft.Extensions.Identity.Stores >= 6.0.10",
+      "TicketSystem.Utility >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -7680,7 +7696,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystem.Utility\\TicketSystem.Utility.csproj": {
+              "projectPath": "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystem.Utility\\TicketSystem.Utility.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -285,3 +285,5 @@ C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystemWeb\obj\Debug\
 C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystemWeb\obj\Debug\net6.0\TicketSystemWeb.pdb
 C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystemWeb\obj\Debug\net6.0\TicketSystemWeb.genruntimeconfig.cache
 C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystemWeb\obj\Debug\net6.0\ref\TicketSystemWeb.dll
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystemWeb\obj\Debug\net6.0\scopedcss\Areas\User\Views\Route\Index.cshtml.rz.scp.css
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystemWeb\obj\Debug\net6.0\scopedcss\Areas\User\Views\Booking\Index.cshtml.rz.scp.css

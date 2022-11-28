@@ -17,11 +17,13 @@ namespace TicketSystem.DataAccess.Repository
             _db = db;
             Stations = new StationRepository(_db);
             Routes = new RouteRepository(_db);
+            BoardingPasses = new BoardingPassRepository(_db);
         }
 
         public IStationRepository Stations { get; private set; }
         public IRouteRepository Routes { get; private set; }
-        
+        public IBoardingPassRepository BoardingPasses { get; private set; }
+
         public void Save()
         {
             _db.SaveChanges();

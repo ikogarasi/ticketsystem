@@ -15,3 +15,5 @@ C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.DataAccess\ob
 C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.DataAccess\obj\Debug\net6.0\TicketSystem.DataAccess.pdb
 C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.DataAccess\obj\Debug\net6.0\TicketSystem.DataAccess.genruntimeconfig.cache
 C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.DataAccess\obj\Debug\net6.0\ref\TicketSystem.DataAccess.dll
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.DataAccess\bin\Debug\net6.0\TicketSystem.Utility.dll
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.DataAccess\bin\Debug\net6.0\TicketSystem.Utility.pdb

@@ -17,4 +17,8 @@
     <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="6.0.10" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TicketSystem.Utility\TicketSystem.Utility.csproj" />
+  </ItemGroup>
+
 </Project>

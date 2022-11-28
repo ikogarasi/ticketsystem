@@ -36,6 +36,9 @@ namespace TicketSystem.Models
         public double Distance { get; set; }
         
         [ValidateNever]
+        /*[DataType(DataType.Time)]
+        [DisplayFormat(DataFormatString = "{0:hh/:mm}",
+        ApplyFormatInEditMode = true)]*/
         public TimeSpan Duration { get; set; }
 
     }

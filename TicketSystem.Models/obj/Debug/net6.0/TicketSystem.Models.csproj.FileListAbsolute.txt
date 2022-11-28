@@ -12,3 +12,6 @@ C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.Models\obj\De
 C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.Models\obj\Debug\net6.0\TicketSystem.Models.pdb
 C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.Models\obj\Debug\net6.0\TicketSystem.Models.genruntimeconfig.cache
 C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.Models\obj\Debug\net6.0\ref\TicketSystem.Models.dll
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.Models\bin\Debug\net6.0\TicketSystem.Utility.dll
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.Models\bin\Debug\net6.0\TicketSystem.Utility.pdb
+C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystem.Models\obj\Debug\net6.0\TicketSystem.Models.csproj.CopyComplete

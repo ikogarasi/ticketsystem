@@ -1688,10 +1688,16 @@
           "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.2.0",
           "Microsoft.EntityFrameworkCore": "6.0.10",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.10",
-          "Microsoft.Extensions.Identity.Stores": "6.0.10"
+          "Microsoft.Extensions.Identity.Stores": "6.0.10",
+          "TicketSystem.Utility": "1.0.0"
         },
         "runtime": {
           "TicketSystem.Models.dll": {}
+        }
+      },
+      "TicketSystem.Utility/1.0.0": {
+        "runtime": {
+          "TicketSystem.Utility.dll": {}
         }
       }
     }
@@ -2816,6 +2822,11 @@
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
     },
     "TicketSystem.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TicketSystem.Utility/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

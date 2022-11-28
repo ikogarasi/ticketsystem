@@ -15,6 +15,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\vital\OneDrive\Documents\LNU\с\TicketSystem\TicketSystemWeb
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/vital/OneDrive/Documents/LNU/с/TicketSystem/TicketSystemWeb/Areas/Admin/Views/BoardingPasses/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQm9hcmRpbmdQYXNzZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/vital/OneDrive/Documents/LNU/с/TicketSystem/TicketSystemWeb/Areas/Admin/Views/Routes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUm91dGVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -75,10 +79,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xIb21lXFByaXZhY3kuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vital/OneDrive/Documents/LNU/с/TicketSystem/TicketSystemWeb/Areas/User/Views/Route/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xSb3V0ZVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/vital/OneDrive/Documents/LNU/с/TicketSystem/TicketSystemWeb/Areas/User/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -115,9 +115,17 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/vital/OneDrive/Documents/LNU/с/TicketSystem/TicketSystemWeb/Areas/User/Views/Booking/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xCb29raW5nXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-fdsces4ybe
+
 [C:/Users/vital/OneDrive/Documents/LNU/с/TicketSystem/TicketSystemWeb/Areas/User/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xIb21lXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = b-p8yrnb09ns
+
+[C:/Users/vital/OneDrive/Documents/LNU/с/TicketSystem/TicketSystemWeb/Areas/User/Views/Route/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xSb3V0ZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-p2w0jsvhan
 
 [C:/Users/vital/OneDrive/Documents/LNU/с/TicketSystem/TicketSystemWeb/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s

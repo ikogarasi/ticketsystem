@@ -166,7 +166,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystem.Utility\\TicketSystem.Utility.csproj": {
+                "projectPath": "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystem.Utility\\TicketSystem.Utility.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

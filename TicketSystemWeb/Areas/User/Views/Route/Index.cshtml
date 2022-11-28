@@ -7,49 +7,66 @@
 
 <section class="data-section">
     <div class="container">
-        <form method="post">
-            <div class="row">
-                <div class="col">
-                    <div class="border p-3 mt-4 row">
-                        <div class="col-6 text-center">
-                            <h2 class="text-primary">@Model.RouteSearchVM.OutgoingStation.Name <i class="bi bi-arrow-right"></i> @Model.RouteSearchVM.DestinationStation.Name</h2>
-                        </div> 
-                    </div>
+        <div class="row">
+            <div class="col">
+                <div class="border p-3 mt-4 row">
+                    <div class="col-6 text-center">
+                        <h2 class="text-primary">@Model.RouteSearchVM.OutgoingStation.Name <i class="bi bi-arrow-right"></i> @Model.RouteSearchVM.DestinationStation.Name</h2>
+                    </div> 
                 </div>
             </div>
-        </form>
+        </div>
     </div>
 </section>
 
 <section class="mt-5">
-    <div class="container">
-        <div class="border p-3 mt-4 row">
-            <h3 class="text-primary">
-                @for (int i = 0; i < @Model.Stations.Count; ++i)
-                {
-                    @Model.Stations[i].Name
-                    if (i != @Model.Stations.Count - 1)
+    <form method="post">
+        <div class="container">
+            <div class="border rounded-5 p-3 mt-4 row">
+                <h3 class="text-primary">
+                    @for (int i = 0; i < @Model.Stations.Count; ++i)
                     {
-                        <i class="bi bi-arrow-right-short"></i>
+                        @Model.Stations[i].Name
+                        if (i != @Model.Stations.Count - 1)
+                        {
+                            <i class="bi bi-arrow-right-short"></i>
+                        }
                     }
-                }
-            </h3>
-            <hr />
-            <p class="text-secondary">
-                <i class="bi bi-airplane"></i>&nbsp;
-                @for (int i = 0; i < @Model.Routes.Count; ++i)
-                {
-                    string coma = ", ";
-                    @Model.Routes[i].Name;
-                    if (i != @Model.Routes.Count - 1)
+                </h3>
+                <hr />
+                <p class="text-secondary">
+                    <i class="bi bi-airplane"></i>&nbsp;
+                    @for (int i = 0; i < @Model.Routes.Count; ++i)
                     {
-                        @coma;
+                        string coma = ", ";
+                        @Model.Routes[i].Name;
+                        if (i != @Model.Routes.Count - 1)
+                        {
+                            @coma;
+                        }
                     }
-                }
-            </p>
-            @*<p class="text-primary">
-                Price: <strong>@Model.SummaryPrice$</strong> 
-            </p>*@
+                </p>
+                <div class="row">
+                    <div class="col" style="text-align:center">
+                        <h4>Distance</h4>
+                        <p>@Model.SummaryDistance km.</p>
+                    </div>
+                    <div class="col" style="text-align:center">
+                        <h4>Duration</h4>
+                        <p>@Model.SummaryTime</p>
+                    </div>
+                    <div class="col" style="text-align:center">
+                        <h4>Price</h4>
+                        <p>@Model.SummaryPrice$</p>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-secondary">
+                    Book flight
+                </button>
+                @*<p class="text-primary">
+                    Price: <strong>@Model.SummaryPrice$</strong> 
+                </p>*@
+            </div>
         </div>
-    </div>
+    </form>
 </section>
