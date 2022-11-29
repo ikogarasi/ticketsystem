@@ -10,5 +10,7 @@ namespace TicketSystem.DataAccess.Repository.IRepository
     public interface IRouteRepository : IRepository<RouteModel>
     {
         void Update(RouteModel obj);
+
+        IEnumerable<RouteModel> GetRoutesFromId(List<Guid> id);
     }
 }

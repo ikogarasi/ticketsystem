@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+A8XdtyT69Zr4Mard4opaMSYKM6SWW+KmlZwNv/ICkZqCHLQbd0YiUETFXSZeRY8Fol2inBwgK3MShaY06OcLw==",
+  "dgSpecHash": "BrtLUSBuMHe0QsM7PzKeKOQSYayX/2Bf2I3Y4e1FV0pROJc+qqSCCcG/aIcbkfVq+Aqpped3TYhce+4aibh5uQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystem.BusinessLogic\\TicketSystem.BusinessLogic.csproj",
+  "projectFilePath": "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystem.BusinessLogic\\TicketSystem.PathService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vital\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
     "C:\\Users\\vital\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

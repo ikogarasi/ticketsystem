@@ -19,7 +19,7 @@ namespace TicketSystem.Models
         public string UserId { get; set; }
         [ForeignKey("UserId")]
         [ValidateNever]
-        public UserModel User { get; set; }
+        public UserModel UserName { get; set; }
 
         [Required]
         public string PassengerFirstName { get; set; }

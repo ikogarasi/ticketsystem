@@ -7650,9 +7650,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystem.BusinessLogic\\TicketSystem.BusinessLogic.csproj",
-      "projectName": "TicketSystem.BusinessLogic",
-      "projectPath": "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystem.BusinessLogic\\TicketSystem.BusinessLogic.csproj",
+      "projectUniqueName": "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystem.BusinessLogic\\TicketSystem.PathService.csproj",
+      "projectName": "TicketSystem.PathService",
+      "projectPath": "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystem.BusinessLogic\\TicketSystem.PathService.csproj",
       "packagesPath": "C:\\Users\\vital\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystem.BusinessLogic\\obj\\",
       "projectStyle": "PackageReference",

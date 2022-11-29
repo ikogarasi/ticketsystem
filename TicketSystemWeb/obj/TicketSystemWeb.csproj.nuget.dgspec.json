@@ -4,12 +4,12 @@
     "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystemWeb\\TicketSystemWeb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystem.BusinessLogic\\TicketSystem.BusinessLogic.csproj": {
+    "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystem.BusinessLogic\\TicketSystem.PathService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystem.BusinessLogic\\TicketSystem.BusinessLogic.csproj",
-        "projectName": "TicketSystem.BusinessLogic",
-        "projectPath": "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystem.BusinessLogic\\TicketSystem.BusinessLogic.csproj",
+        "projectUniqueName": "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystem.BusinessLogic\\TicketSystem.PathService.csproj",
+        "projectName": "TicketSystem.PathService",
+        "projectPath": "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystem.BusinessLogic\\TicketSystem.PathService.csproj",
         "packagesPath": "C:\\Users\\vital\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystem.BusinessLogic\\obj\\",
         "projectStyle": "PackageReference",
@@ -303,8 +303,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystem.BusinessLogic\\TicketSystem.BusinessLogic.csproj": {
-                "projectPath": "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystem.BusinessLogic\\TicketSystem.BusinessLogic.csproj"
+              "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystem.BusinessLogic\\TicketSystem.PathService.csproj": {
+                "projectPath": "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystem.BusinessLogic\\TicketSystem.PathService.csproj"
               },
               "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystem.DataAccess\\TicketSystem.DataAccess.csproj": {
                 "projectPath": "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystem.DataAccess\\TicketSystem.DataAccess.csproj"

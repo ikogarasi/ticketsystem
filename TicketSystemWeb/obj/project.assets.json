@@ -3696,20 +3696,6 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "TicketSystem.BusinessLogic/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "TicketSystem.DataAccess": "1.0.0",
-          "TicketSystem.Models": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/TicketSystem.BusinessLogic.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/TicketSystem.BusinessLogic.dll": {}
-        }
-      },
       "TicketSystem.DataAccess/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -3741,6 +3727,20 @@
         },
         "runtime": {
           "bin/placeholder/TicketSystem.Models.dll": {}
+        }
+      },
+      "TicketSystem.PathService/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "TicketSystem.DataAccess": "1.0.0",
+          "TicketSystem.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TicketSystem.PathService.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TicketSystem.PathService.dll": {}
         }
       },
       "TicketSystem.Utility/1.0.0": {
@@ -11048,11 +11048,6 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "TicketSystem.BusinessLogic/1.0.0": {
-      "type": "project",
-      "path": "../TicketSystem.BusinessLogic/TicketSystem.BusinessLogic.csproj",
-      "msbuildProject": "../TicketSystem.BusinessLogic/TicketSystem.BusinessLogic.csproj"
-    },
     "TicketSystem.DataAccess/1.0.0": {
       "type": "project",
       "path": "../TicketSystem.DataAccess/TicketSystem.DataAccess.csproj",
@@ -11062,6 +11057,11 @@
       "type": "project",
       "path": "../TicketSystem.Models/TicketSystem.Models.csproj",
       "msbuildProject": "../TicketSystem.Models/TicketSystem.Models.csproj"
+    },
+    "TicketSystem.PathService/1.0.0": {
+      "type": "project",
+      "path": "../TicketSystem.BusinessLogic/TicketSystem.PathService.csproj",
+      "msbuildProject": "../TicketSystem.BusinessLogic/TicketSystem.PathService.csproj"
     },
     "TicketSystem.Utility/1.0.0": {
       "type": "project",
@@ -11077,8 +11077,8 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.10",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.10",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.10",
-      "TicketSystem.BusinessLogic >= 1.0.0",
       "TicketSystem.DataAccess >= 1.0.0",
+      "TicketSystem.PathService >= 1.0.0",
       "TicketSystem.Utility >= 1.0.0"
     ]
   },
@@ -11109,8 +11109,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystem.BusinessLogic\\TicketSystem.BusinessLogic.csproj": {
-              "projectPath": "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystem.BusinessLogic\\TicketSystem.BusinessLogic.csproj"
+            "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystem.BusinessLogic\\TicketSystem.PathService.csproj": {
+              "projectPath": "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystem.BusinessLogic\\TicketSystem.PathService.csproj"
             },
             "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystem.DataAccess\\TicketSystem.DataAccess.csproj": {
               "projectPath": "C:\\Users\\vital\\OneDrive\\Documents\\LNU\\с\\TicketSystem\\TicketSystem.DataAccess\\TicketSystem.DataAccess.csproj"

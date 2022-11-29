@@ -23,7 +23,7 @@ namespace TicketSystemWeb.Areas.User.Controllers
         {
             SearchResultVM searchResultVM = new()
             {
-                RouteSearchVM = obj
+                RouteSearchVM = obj,
             };
 
             searchResultVM.RouteSearchVM.OutgoingStation = _unitOfWork.Stations.GetFirstOrDefault(i => i.Id == obj.OutgoingStationId);
@@ -31,12 +31,15 @@ namespace TicketSystemWeb.Areas.User.Controllers
 
             ShortestPathHandler shortestPathLogic = new ShortestPathHandler(_unitOfWork);
             shortestPathLogic.FindShortestRoute(searchResultVM);
-
+            TempData["SumPrice"] = JsonConvert.SerializeObject(searchResultVM.SummaryPrice);
+            List<Guid> routeIdList = new List<Guid>();
+            searchResultVM.Routes.ForEach(i => routeIdList.Add(i.Id));
+            TempData["Routes"] = JsonConvert.SerializeObject(routeIdList);
             return View(searchResultVM);
         }
 
-        [HttpPost]
-        public IActionResult Index()
+        [HttpPost, ActionName("Index")]
+        public IActionResult IndexPOST()
         {
             return RedirectToAction("Index", "Booking");
         }

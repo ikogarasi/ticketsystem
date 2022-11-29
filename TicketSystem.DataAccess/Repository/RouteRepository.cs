@@ -18,7 +18,18 @@ namespace TicketSystem.DataAccess.Repository
         {
             _db = db;
         }
-    
+
+        public IEnumerable<RouteModel> GetRoutesFromId(List<Guid> id)
+        {
+            List<RouteModel> routes = new List<RouteModel>();
+            foreach (var item in id)
+            {
+                routes.Add(_db.Routes.FirstOrDefault(i => i.Id == item));
+            }
+
+            return routes;
+        }
+
         public void Update(RouteModel obj)
         {
             var routeFromDb = _db.Routes.FirstOrDefault(i => i.Id == obj.Id);

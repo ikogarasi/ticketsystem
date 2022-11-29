@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TicketSystem.BusinessLogic\TicketSystem.BusinessLogic.csproj" />
+    <ProjectReference Include="..\TicketSystem.BusinessLogic\TicketSystem.PathService.csproj" />
     <ProjectReference Include="..\TicketSystem.DataAccess\TicketSystem.DataAccess.csproj" />
     <ProjectReference Include="..\TicketSystem.Utility\TicketSystem.Utility.csproj" />
   </ItemGroup>
