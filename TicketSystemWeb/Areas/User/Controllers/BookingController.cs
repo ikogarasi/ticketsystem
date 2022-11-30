@@ -1,7 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using System.Security.Claims;
 using TicketSystem.DataAccess.Repository.IRepository;
 using TicketSystem.Models;
 using TicketSystem.Models.ViewModels;
@@ -12,12 +10,10 @@ namespace TicketSystemWeb.Areas.User.Controllers
     public class BookingController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
-        //private readonly UserManager<UserModel> _userManager;
 
         public BookingController(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
-            //_userManager = userManager;
         }
 
         [HttpGet]
@@ -42,11 +38,18 @@ namespace TicketSystemWeb.Areas.User.Controllers
         {
             obj.RoutesId = JsonConvert.DeserializeObject<List<Guid>>(TempData["Routes"].ToString());
             obj.SumPrice = Convert.ToDouble(TempData["SumPrice"]);
+            var user = _unitOfWork.Users.GetFirstOrDefault(i => User.Identity.Name == i.UserName);
             BoardingPassModel boardingPassModel = obj.BoardPass;
-            boardingPassModel.UserId = User.FindFirstValue("");
+            boardingPassModel.UserId = user.Id;
+            for (int i = 0; i < obj.RoutesId.Count; ++i)
+            {
+                boardingPassModel.RouteId = obj.RoutesId[i];
+                _unitOfWork.BoardingPasses.Add(boardingPassModel);
+                _unitOfWork.Save();
+                boardingPassModel.Id = Guid.NewGuid();
+            }
 
             return RedirectToAction("Index", "Home");
         }
-        
     }
 }

@@ -226,7 +226,7 @@ namespace TicketSystem.DataAccess.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("TicketSystem.Models.BoardingPass", b =>
+            modelBuilder.Entity("TicketSystem.Models.BoardingPassModel", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -248,6 +248,9 @@ namespace TicketSystem.DataAccess.Migrations
 
                     b.Property<Guid>("RouteId")
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Seat")
+                        .HasColumnType("int");
 
                     b.Property<string>("UserId")
                         .IsRequired()
@@ -382,7 +385,7 @@ namespace TicketSystem.DataAccess.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("TicketSystem.Models.BoardingPass", b =>
+            modelBuilder.Entity("TicketSystem.Models.BoardingPassModel", b =>
                 {
                     b.HasOne("TicketSystem.Models.RouteModel", "Route")
                         .WithMany()
@@ -390,7 +393,7 @@ namespace TicketSystem.DataAccess.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("TicketSystem.Models.UserModel", "User")
+                    b.HasOne("TicketSystem.Models.UserModel", "UserModel")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -398,7 +401,7 @@ namespace TicketSystem.DataAccess.Migrations
 
                     b.Navigation("Route");
 
-                    b.Navigation("User");
+                    b.Navigation("UserModel");
                 });
 
             modelBuilder.Entity("TicketSystem.Models.RouteModel", b =>

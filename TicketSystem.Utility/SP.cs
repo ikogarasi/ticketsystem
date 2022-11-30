@@ -19,4 +19,9 @@ namespace TicketSystem.Utility
         A9, B9, C9, D9, E9, F9,
         A10, B10, C10, D10, E10, F10,
     }
+
+    public enum Gender
+    {
+        Mr, Mrs, Ms, Other
+    }
 }

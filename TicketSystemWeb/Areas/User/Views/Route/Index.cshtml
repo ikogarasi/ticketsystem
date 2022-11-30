@@ -23,6 +23,8 @@
     <form method="post">
         <div class="container">
             <div class="border rounded-5 p-3 mt-4 row">
+            @if (Model.IsRouteFound)
+            {
                 <h3 class="text-primary">
                     @for (int i = 0; i < @Model.Stations.Count; ++i)
                     {
@@ -39,10 +41,12 @@
                     @for (int i = 0; i < @Model.Routes.Count; ++i)
                     {
                         string coma = ", ";
-                        @Model.Routes[i].Name;
+                        @Model.Routes[i].Name
+                        ;
                         if (i != @Model.Routes.Count - 1)
                         {
-                            @coma;
+                            @coma
+                            ;
                         }
                     }
                 </p>
@@ -63,9 +67,13 @@
                 <button type="submit" class="btn btn-secondary">
                     Book flight
                 </button>
-                @*<p class="text-primary">
-                    Price: <strong>@Model.SummaryPrice$</strong> 
-                </p>*@
+                }
+                else
+                {
+                    <h3 class="text-primary">
+                        Route Not Found.
+                    </h3>
+                }
             </div>
         </div>
     </form>

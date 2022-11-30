@@ -1,11 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using TicketSystem.DataAccess.Repository.IRepository;
 using TicketSystem.Models.ViewModels;
+using TicketSystem.Utility;
 
 namespace TicketSystemWeb.Areas.Admin.Controllers
 {
     [Area("admin")]
+    [Authorize(Roles = SD.Role_Admin)]
     public class RoutesController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;

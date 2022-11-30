@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Newtonsoft.Json;
 using System.Diagnostics;
 using TicketSystem.DataAccess.Repository.IRepository;
 using TicketSystem.Models.ViewModels;

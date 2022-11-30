@@ -4,7 +4,7 @@
 @{
 }
 
-<div container>
+<div class="container">
     <div class="container p-3">
         <div class="row pt-4">
             <div class="col-6">
@@ -20,6 +20,38 @@
     <br /><br /><br />
 
     <table id="tblData" class="table table-bordered table-striped">
-
+        <thead>
+            <tr>
+                <th>
+                    User Name
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    First Name
+                </th>
+                <th>
+                    Second Name
+                </th>
+                <th>
+                    Gender
+                </th>
+                <th>
+                    Birth date
+                </th>
+                <th>
+                    Route
+                </th>
+                <th>
+                    Seating place
+                </th>
+            </tr>
+        </thead>
     </table>
 </div>
+
+@section Scripts
+{
+    <script src="~/js/boardingPasses.js"></script>
+}

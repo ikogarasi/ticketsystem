@@ -1,11 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TicketSystem.Utility;
 
 namespace TicketSystem.Models
@@ -19,25 +14,29 @@ namespace TicketSystem.Models
         public string UserId { get; set; }
         [ForeignKey("UserId")]
         [ValidateNever]
-        public UserModel UserName { get; set; }
-
+        public UserModel UserModel { get; set; }
         [Required]
         public string PassengerFirstName { get; set; }
-        
         [Required]
         public string PassengerSecondName { get; set; }
-        
         [Required]
+        [EnumDataType(typeof(Gender))]
         public Gender PassengerGender { get; set; }
-        
+        [ValidateNever]
+        [NotMapped]
+        public string? GenderString { get; set; }
         [Required]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:d/M/yyyy}",
             ApplyFormatInEditMode = true)]
         [Display(Name = "Date of birth")]
         public DateTime BirthDate { get; set; }
-        
+        [Required]
+        [EnumDataType(typeof(SittingPlace))]
         public SittingPlace Seat { get; set; }
+        [ValidateNever]
+        [NotMapped]
+        public string? SeatString { get; set; }
 
         [Required]
         public Guid RouteId { get; set; }

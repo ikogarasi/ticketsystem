@@ -1,11 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.JSInterop;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using TicketSystem.DataAccess.Repository.IRepository;
 using TicketSystem.Models;
+using TicketSystem.Utility;
 
 namespace TicketSystemWeb.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = SD.Role_Admin)]
     public class StationsController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
