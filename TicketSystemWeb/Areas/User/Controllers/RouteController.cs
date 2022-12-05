@@ -30,18 +30,18 @@ namespace TicketSystemWeb.Areas.User.Controllers
             shortestPathLogic.FindShortestRoute(searchResultVM);
             if (searchResultVM.IsRouteFound)
             {
-                TempData["SumPrice"] = JsonConvert.SerializeObject(searchResultVM.SummaryPrice);
-                List<Guid> routeIdList = new List<Guid>();
-                searchResultVM.Routes.ForEach(i => routeIdList.Add(i.Id));
-                TempData["Routes"] = JsonConvert.SerializeObject(routeIdList);
+                List<Guid> routeIds = new List<Guid>();
+                searchResultVM.Routes.ForEach(route => routeIds.Add(route.Id));
+                HttpContext.Session.SetString("Routes", JsonConvert.SerializeObject(routeIds));
+
             }
             return View(searchResultVM);
         }
 
         [HttpPost, ActionName("Index")]
-        public IActionResult IndexPOST()
+        public IActionResult IndexPOST(Guid routeId)
         {
-            return RedirectToAction("Index", "Booking");
+            return Json(new {redirectUrl = Url.Action("Index", "Booking", new { routeId = routeId })});
         }
     }
 }

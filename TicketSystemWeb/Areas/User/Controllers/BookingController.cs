@@ -17,37 +17,34 @@ namespace TicketSystemWeb.Areas.User.Controllers
         }
 
         [HttpGet]
-        public IActionResult Index()
+        public IActionResult Index(Guid routeId)
         {
             PassBookingVM passBookingVM = new()
             {
-                RoutesId = JsonConvert.DeserializeObject<List<Guid>>(TempData["Routes"].ToString()),
                 BoardPass = new(),
-                SumPrice = Convert.ToDouble(TempData["SumPrice"])
+                RouteId = routeId,
+                Route = _unitOfWork.Routes.GetFirstOrDefault(i => i.Id == routeId)
             };
-            TempData.Keep("SumPrice");
-            TempData.Keep("Routes");
 
-            passBookingVM.Routes = _unitOfWork.Routes.GetRoutesFromId(passBookingVM.RoutesId).ToList();
-
+            TempData["route"] = routeId;
             return View(passBookingVM);
         }
 
         [HttpPost, ActionName("Index")]
         public IActionResult IndexPOST(PassBookingVM obj)
         {
-            obj.RoutesId = JsonConvert.DeserializeObject<List<Guid>>(TempData["Routes"].ToString());
-            obj.SumPrice = Convert.ToDouble(TempData["SumPrice"]);
             var user = _unitOfWork.Users.GetFirstOrDefault(i => User.Identity.Name == i.UserName);
             BoardingPassModel boardingPassModel = obj.BoardPass;
             boardingPassModel.UserId = user.Id;
-            for (int i = 0; i < obj.RoutesId.Count; ++i)
-            {
-                boardingPassModel.RouteId = obj.RoutesId[i];
-                _unitOfWork.BoardingPasses.Add(boardingPassModel);
-                _unitOfWork.Save();
-                boardingPassModel.Id = Guid.NewGuid();
-            }
+            boardingPassModel.RouteId = Guid.Parse(TempData["route"].ToString());
+            _unitOfWork.BoardingPasses.Add(boardingPassModel);
+            _unitOfWork.Save();
+            List<Guid> routesGuids = JsonConvert.DeserializeObject<List<Guid>>(HttpContext.Session.GetString("Routes"));
+            routesGuids.Remove(obj.RouteId);
+            HttpContext.Session.SetString("Routes", JsonConvert.SerializeObject(routesGuids));
+            
+            if (routesGuids.Count > 0)
+                return RedirectToAction("Index", "Route");
 
             return RedirectToAction("Index", "Home");
         }

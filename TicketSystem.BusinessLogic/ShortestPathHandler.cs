@@ -46,7 +46,7 @@ namespace TicketSystem.BusinessLogic
                 obj.IsRouteFound = false;
                 return;
             }
-            
+
             List<RouteModel> routes = new List<RouteModel>();
             for (int i = 0; i < stations.Count - 1; ++i)
             {

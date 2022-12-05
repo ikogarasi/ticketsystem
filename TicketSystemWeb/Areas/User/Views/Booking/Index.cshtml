@@ -46,15 +46,7 @@
                  <hr />
                  <div class="container">
                     <p class="text-primary">
-                       @for (int i = 0; i < @Model.Routes.Count; ++i)
-                        {
-                            string coma = ", ";
-                            @Model.Routes[i].Name;
-                            if (i != @Model.Routes.Count - 1)
-                            {
-                                @coma;
-                            }
-                        }
+                       @Model.Route.Name
                     </p>
                     <div class="form-floating py-2">
                         <div class="btn-group" role="group" aria-label="Basic radio toggle button group" bis_skin_checked="1">
