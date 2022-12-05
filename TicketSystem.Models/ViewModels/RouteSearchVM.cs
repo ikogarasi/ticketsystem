@@ -13,6 +13,8 @@ namespace TicketSystem.Models.ViewModels
         [ForeignKey("DestinationStationId")]
         public StationModel DestinationStation { get; set; }
 
+        public bool isReturnWay { get; set; }
+
         [ValidateNever]
         public Priorities Priority { get; set; }
 

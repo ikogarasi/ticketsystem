@@ -1,3 +1,51 @@
 ﻿html {
     background-color: #7e7e7e !important;
 }
+
+*, *:after,*:before {
+    
+}
+
+.wayline {
+    margin: 5px auto;
+    text-align: center;
+    padding-left: 20px;
+}
+
+.wayline .circle,
+.wayline .bar {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: #b8b8b8;
+    border-radius: 20px;
+    border: 1px solid #b8b8b8;
+    vertical-align: top;
+}
+
+.wayline .bar {
+    position: relative;
+    width: 6px;
+    height: 40px;
+    margin: 0 0px 0px 7px;
+    border-radius: 0;
+    border-color: #d8d8d8;
+    background: #d8d8d8;
+    vertical-align: top;
+    left: 0;
+}
+
+.wayline .bar .title {
+    line-height:34px;
+    padding-left:35px;
+    display: block;
+    text-align: left;
+}
+
+.wayline .circle .title {
+    line-height:65px;
+    padding-left: 35px;
+    display: block;
+    margin-top: -25px;
+    text-align: left;
+}

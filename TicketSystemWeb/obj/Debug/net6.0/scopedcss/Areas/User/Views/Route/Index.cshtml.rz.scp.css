@@ -1,0 +1,51 @@
+html[b-p2w0jsvhan] {
+    background-color: #7e7e7e !important;
+}
+
+*[b-p2w0jsvhan], *[b-p2w0jsvhan]:after,*[b-p2w0jsvhan]:before {
+    
+}
+
+.wayline[b-p2w0jsvhan] {
+    margin: 5px auto;
+    text-align: center;
+    padding-left: 20px;
+}
+
+.wayline .circle[b-p2w0jsvhan],
+.wayline .bar[b-p2w0jsvhan] {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: #b8b8b8;
+    border-radius: 20px;
+    border: 1px solid #b8b8b8;
+    vertical-align: top;
+}
+
+.wayline .bar[b-p2w0jsvhan] {
+    position: relative;
+    width: 6px;
+    height: 40px;
+    margin: 0 0px 0px 7px;
+    border-radius: 0;
+    border-color: #d8d8d8;
+    background: #d8d8d8;
+    vertical-align: top;
+    left: 0;
+}
+
+.wayline .bar .title[b-p2w0jsvhan] {
+    line-height:34px;
+    padding-left:35px;
+    display: block;
+    text-align: left;
+}
+
+.wayline .circle .title[b-p2w0jsvhan] {
+    line-height:65px;
+    padding-left: 35px;
+    display: block;
+    margin-top: -25px;
+    text-align: left;
+}

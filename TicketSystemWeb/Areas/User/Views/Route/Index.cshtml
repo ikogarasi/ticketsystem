@@ -5,7 +5,7 @@
 @{
 }
 
-<section class="data-section">
+@*<section class="data-section">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -18,11 +18,62 @@
         </div>
     </div>
 </section>
-
+*@
 <section class="mt-5">
     <form method="post">
         <div class="container">
             <div class="border rounded-5 p-3 mt-4 row">
+                <div class="text-center">
+                    <h2 class="text-primary">
+                        <a style="text-decoration:none" data-bs-toggle="collapse" href="#collapseWay" aria-expanded="false" aria-controls="collapseWay">
+                            @Model.RouteSearchVM.OutgoingStation.Name <i class="bi bi-arrow-right"></i> @Model.RouteSearchVM.DestinationStation.Name
+                        </a>
+                    </h2>
+                </div>
+                @*@if (Model.IsRouteFound)
+                {
+                        <a style="text-decoration:none" data-bs-toggle="collapse" href="#collapseWay" aria-expanded="false" aria-controls="collapseWay">
+                            @for (int i = 0; i < @Model.Stations.Count; ++i)
+                            {
+                                @Model.Stations[i].Name
+                                if (i != @Model.Stations.Count - 1)
+                                {
+                                    <i class="bi bi-arrow-right-short"></i>
+                                }
+                            }
+                        </a>
+                }*@
+               <div class="collapse" id="collapseWay">
+                @for (int i = 0; i < @Model.Routes.Count; ++i)
+                {
+                    <hr />
+                    <div class="container">
+                        <div class="row">
+                            <div class="wayline col-5">
+                                <div class="circle">
+                                    <span class="title">@Model.Routes[i].OutgoingStation.Name</span>
+                                </div>     
+                                <div class="bar">
+                                    <span class="title">@Model.Routes[i].Duration.ToString(@"hh\:mm")</span>
+                                </div>
+                                <div class="circle">
+                                    <span class="title text-secondary">@Model.Routes[i].DestinationStation.Name</span>
+                                </div>
+                            </div>
+                            <div class="col-3 text-end">
+                                <button type="submit" class="btn btn-outline-primary" style="border-radius:5px">Book flight</button>
+                                <p class="text-secondary">@Model.Routes[i].Name</p>
+                            </div>
+                            <div class="col-3 text-end">
+                                <h5>@Model.Routes[i].Price</h5>
+                            </div>
+                        </div>
+                    </div>
+                    
+                }
+                </div>
+            </div>
+@*            <div class="border rounded-5 p-3 mt-4 row">
             @if (Model.IsRouteFound)
             {
                 <h3 class="text-primary">
@@ -74,7 +125,7 @@
                         Route Not Found.
                     </h3>
                 }
-            </div>
+            </div>*@
         </div>
     </form>
 </section>
